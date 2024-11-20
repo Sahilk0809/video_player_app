@@ -6,7 +6,7 @@ import 'package:video_player_app/modal/video_modal.dart';
 
 class VideoProvider extends ChangeNotifier {
   VideoPlayerModal? videoPlayerModal;
-  ApiHelper apiHelper = ApiHelper();
+  ApiHelper apiHelper = ApiHelper(); // instance of api helper class
 
   late VideoPlayerController videoPlayerController;
   ChewieController? chewieController;

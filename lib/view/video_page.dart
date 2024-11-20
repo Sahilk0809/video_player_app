@@ -300,6 +300,18 @@ class _VideoPageState extends State<VideoPage> {
                         final video = videos[index];
 
                         return ListTile(
+                          onTap: () {
+                            Navigator.of(context).pushReplacement(
+                              MaterialPageRoute(
+                                builder: (context) => VideoPage(
+                                  videoUrl: video.sources.first,
+                                  title: video.title,
+                                  channelName: video.description,
+                                  views: '1M',
+                                ),
+                              ),
+                            );
+                          },
                           leading: ClipRRect(
                             borderRadius: BorderRadius.circular(5),
                             child: Image.network(
